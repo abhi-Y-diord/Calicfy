@@ -1,0 +1,155 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Permanent Left Sidebar -->
+<div id="sidebar" class="sidebar">
+
+    <div class="sidebar-header">
+        <h2>Calcify</h2>
+    </div>
+
+    <button onclick="showSection('calculator-section')">Calculator</button>
+    <button onclick="showSection('guide-section')">Guide</button>
+    <button onclick="showSection('history-section')">History</button>
+    <button onclick="showSection('about-section')">About</button>
+
+</div>
+
+<!-- Main App -->
+<div class="app-container">
+
+    <!-- ========================= -->
+    <!-- CALCULATOR SECTION -->
+    <!-- ========================= -->
+
+    <div id="calculator-section" class="section active">
+
+        <div class="calculator">
+
+            <!-- Top Buttons -->
+            <div class="top-bar">
+                <button id="shift-btn" class="top-btn">SHIFT</button>
+                <button id="mode-btn" class="top-btn">DEG</button>
+            </div>
+
+            <!-- Display -->
+            <div class="display-container">
+                <div class="display" id="display">0</div>
+            </div>
+
+            <!-- Calculator Buttons -->
+            <div class="buttons">
+
+                <button>C</button>
+                <button>⌫</button>
+                <button>(</button>
+                <button>)</button>
+
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>/</button>
+
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>*</button>
+
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>-</button>
+
+                <button>0</button>
+                <button>.</button>
+                <button>%</button>
+                <button>+</button>
+
+                <button>√</button>
+                <button>log</button>
+                <button>ln</button>
+                <button>^</button>
+
+                <button>sin</button>
+                <button>cos</button>
+                <button>tan</button>
+                <button>π</button>
+
+                <button>x²</button>
+                <button>x³</button>
+                <button>e</button>
+                <button>frac</button>
+
+                <button class="equal-btn">=</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- GUIDE SECTION -->
+
+    <div id="guide-section" class="section">
+
+        <div class="info-card">
+            <h2>User Guide</h2>
+
+            <p><strong>SHIFT + log</strong> → antilog</p>
+            <p><strong>SHIFT + sin</strong> → sin⁻¹</p>
+            <p><strong>SHIFT + cos</strong> → cos⁻¹</p>
+            <p><strong>SHIFT + tan</strong> → tan⁻¹</p>
+            <p><strong>DEG / RAD</strong> → angle mode switching</p>
+            <p><strong>√</strong> → square root</p>
+            <p><strong>x²</strong> → square</p>
+            <p><strong>x³</strong> → cube</p>
+            <p><strong>frac</strong> → fraction mode</p>
+            <p><strong>π</strong> → pi value</p>
+            <p><strong>e</strong> → Euler constant</p>
+        </div>
+
+    </div>
+
+    <!-- HISTORY SECTION -->
+
+    <div id="history-section" class="section">
+
+        <div class="info-card">
+            <h2>Calculation History</h2>
+
+            <div id="history-list">
+                <p>No history yet.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ABOUT SECTION -->
+
+    <div id="about-section" class="section">
+
+        <div class="info-card">
+            <h2>About</h2>
+
+            <p><strong>App Name:</strong> Calcify</p>
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Purpose:</strong> Premium Scientific Calculator</p>
+            <p><strong>Built With:</strong> Python + Flask + HTML + CSS + JavaScript</p>
+            <p><strong>Developer:</strong> Abhishek Yadav</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

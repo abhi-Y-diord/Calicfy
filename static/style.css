@@ -1,0 +1,220 @@
+/* static/style.css */
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0b1220, #172554, #1e293b);
+    font-family: Arial, sans-serif;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* =========================
+   PERMANENT SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 30px 20px;
+
+    background: rgba(15, 23, 42, 0.96);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border-right: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    z-index: 1500;
+}
+
+.sidebar-header {
+    margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sidebar button {
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 18px;
+    transition: 0.2s;
+}
+
+.sidebar button:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* =========================
+   MAIN APP CONTAINER
+========================= */
+
+.app-container {
+    width: 380px;
+    min-height: 92vh;
+
+    padding: 18px;
+    border-radius: 28px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.35),
+        inset 0 1px 1px rgba(255,255,255,0.08);
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-20%);
+}
+
+/* =========================
+   SECTION CONTROL
+========================= */
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.top-btn {
+    flex: 1;
+    height: 48px;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.10);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================
+   DISPLAY
+========================= */
+
+.display-container {
+    min-height: 110px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.10);
+    margin-bottom: 15px;
+    padding: 15px;
+    overflow-y: auto;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.display {
+    font-size: 28px;
+    text-align: right;
+    word-break: break-word;
+    min-height: 80px;
+}
+
+/* =========================
+   BUTTON GRID
+========================= */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.10);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.18);
+}
+
+/* =========================
+   EQUAL BUTTON
+========================= */
+
+.equal-btn {
+    grid-column: span 4;
+    height: 58px;
+    background: rgba(37, 99, 235, 0.95);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.info-card {
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.info-card h2 {
+    margin-bottom: 16px;
+}
+
+.info-card p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
