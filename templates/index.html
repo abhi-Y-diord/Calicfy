@@ -10,17 +10,23 @@
 </head>
 <body>
 
-<!-- Permanent Left Sidebar -->
+<!-- Mobile menu toggle (three-dot / hamburger button) -->
+<button id="menu-toggle" class="menu-toggle" onclick="toggleSidebar()">&#8942;</button>
+
+<!-- Dark overlay behind sidebar on mobile -->
+<div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- Sidebar (permanent on desktop, slide-in on mobile) -->
 <div id="sidebar" class="sidebar">
 
     <div class="sidebar-header">
         <h2>Calcify</h2>
     </div>
 
-    <button onclick="showSection('calculator-section')">Calculator</button>
-    <button onclick="showSection('guide-section')">Guide</button>
-    <button onclick="showSection('history-section')">History</button>
-    <button onclick="showSection('about-section')">About</button>
+    <button onclick="selectSection('calculator-section')">Calculator</button>
+    <button onclick="selectSection('guide-section')">Guide</button>
+    <button onclick="selectSection('history-section')">History</button>
+    <button onclick="selectSection('about-section')">About</button>
 
 </div>
 

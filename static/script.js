@@ -67,6 +67,30 @@ function showSection(sectionId) {
 }
 
 /* =========================
+   MOBILE SIDEBAR TOGGLE
+========================= */
+
+const sidebar = document.getElementById("sidebar");
+const sidebarOverlay = document.getElementById("sidebar-overlay");
+
+function toggleSidebar() {
+    sidebar.classList.toggle("open");
+    sidebarOverlay.classList.toggle("active");
+}
+
+function closeSidebar() {
+    sidebar.classList.remove("open");
+    sidebarOverlay.classList.remove("active");
+}
+
+/* Called from the sidebar buttons: shows the section, then
+   closes the sidebar (so it behaves like a proper mobile menu) */
+function selectSection(sectionId) {
+    showSection(sectionId);
+    closeSidebar();
+}
+
+/* =========================
    SHIFT BUTTON
 ========================= */
 

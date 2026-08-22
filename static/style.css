@@ -52,6 +52,76 @@ body {
     gap: 14px;
 
     z-index: 1500;
+
+    transition: transform 0.3s ease;
+}
+
+/* =========================
+   MOBILE MENU TOGGLE (three-dot button)
+========================= */
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1700;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   OVERLAY (behind sidebar on mobile)
+========================= */
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1400;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* =========================
+   MOBILE LAYOUT (<= 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .app-container {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
 }
 
 .sidebar-header {
