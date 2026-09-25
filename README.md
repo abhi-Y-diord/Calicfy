@@ -1,6 +1,8 @@
 # Scientific Calculator
 
 A simple, minimal-look scientific calculator web app built with Flask.
+![Uploading image.png…]()
+
 
 🔗 **Live App:** [https://calicfy.onrender.com/](https://calicfy.onrender.com/)
 
