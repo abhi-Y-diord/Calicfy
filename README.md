@@ -2,7 +2,7 @@
 
 A simple, minimal-look scientific calculator web app built with Flask.
 
-![Screenshot](images/screenshot.png)
+![Screenshot](images/Screenshot.png)
 
 
 🔗 **Live App:** [https://calicfy.onrender.com/](https://calicfy.onrender.com/)
